@@ -121,28 +121,6 @@ var insertDocuments = function(db, req, filePath, callback) {
 // IMAGE CODE END
 //---------------------------------------
 
-
-// ---------------------------------------
-// PAYMENT CODE
-//---------------------------------------
-
-    app.post('/paymentSuccess', (req, res) => {
-        console.log(req);
-        console.log(res);
-        console.log("mata");
-        res.redirect('test');
-       /* insertDocuments(db, req, 'images/uploads/' + req.file.filename, () => {
-            //db.close();
-            //res.json({'message': 'File uploaded successfully'});
-            res.redirect('/profile')
-        });*/
-    });
-
-
-//---------------------------------------
-// PAYMENT CODE END
-//---------------------------------------
-
 // =============================================================================
 // AUTHENTICATE (FIRST LOGIN) ==================================================
 // =============================================================================

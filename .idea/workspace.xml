@@ -49,6 +49,7 @@
         <entry key="$PROJECT_DIR$" value="Frontend" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="345" />
@@ -61,13 +62,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Program Files/nodejs/node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../Program Files/nodejs/node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\front-end\EUvsVirus\app" />
+      <recent name="G:\front-end\EUvsVirus\views" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="BoilerPlateCode" type="NodeJSConfigurationType" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
@@ -111,6 +118,15 @@
     <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -138,5 +154,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="188" y="92" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587836028365" />
+    <state x="672" y="128" width="585" height="795" key="find.popup" timestamp="1587836788625">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="128" width="585" height="795" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587836788625" />
   </component>
 </project>
