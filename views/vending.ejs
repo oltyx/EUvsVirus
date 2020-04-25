@@ -38,13 +38,32 @@
       <section class="pay rounded-blob open-font">
         <div class="row">
           <div class="col-12 col-md-3">
+            <selection>
+              <form class=" ml-5payment-form container text-center" method="POST" action="https://merchant.com/successUrl">
+                <script>
+                  window.CKOConfig = {
+                    publicKey: 'pk_test_6ff46046-30af-41d9-bf58-929022d2cd14',
+                    customerEmail: 'user@email.com',
+                    value: 100,
+                    currency: 'EUR',
+                    paymentMode: 'cards',
+                    cardFormMode: 'cardTokenisation',
+                    cardTokenised: function(event) {
+                      console.log(event.data.cardToken);
+                    }
+                  };
+                </script>
+                <script async src="https://cdn.checkout.com/sandbox/js/checkout.js"></script>
+              </form>
+            </selection><br>
+
             <section class="mb-4 ml-0 ml-md-5">
-              <button class=" btn btn-lg mt-5 pay-button mb-3 px-5" id="payBtn" type="button" name="button">Pay</button>
-              <section class="" id="client">
-                <p class="">Total = <span id="pri">0.00 €</span></p>
+                    <div/>
+              <br><section class="" id="client">
+                <p class=" mt-5 container text-center">Total = <span id="pri">0.00 €</span></p>
               </section>
             </section>
-          </div>
+                  </div>
           <div class="col-12 col-md-9">
             <section class="choice mb-2 mt-2 rounded-blob" style="background-color: #c5cae9">
               <p style="font-weight: bold; color: #37474f">Your Item:</p>
