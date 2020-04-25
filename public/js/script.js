@@ -8,7 +8,7 @@ const selectImg = document.querySelector("#selectImg")
 const selectPrice = document.querySelector("#pri")
 
 const avai = document.querySelector("#avai")
-let totalView = document.querySelector("#totalView")
+// let totalView = document.querySelector("#totalView")
 
 let source = ""
 let justPrice = ""
@@ -47,27 +47,27 @@ about.addEventListener("click", function(e) {
 })
 
 
-pay.addEventListener('click', function(e) {
-  //cash float
-  let mon = Number(justPrice.substr(1))
-  total =+ mon
-  // totalView.value = total
-
-  fetch('messages', {
-      method: 'put',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        'image': source,
-        'count': Number(count)
-      })
-    })
-    .then(response => {
-      if (response.ok) return response.json()
-    })
-    .then(data => {
-      console.log(data)
-      window.location.reload(true)
-    })
-});
+// pay.addEventListener('click', function(e) {
+//   //cash float
+//   let mon = Number(justPrice.substr(1))
+//   total =+ mon
+//   // totalView.value = total
+//
+//   fetch('messages', {
+//       method: 'put',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify({
+//         'image': source,
+//         'count': Number(count)
+//       })
+//     })
+//     .then(response => {
+//       if (response.ok) return response.json()
+//     })
+//     .then(data => {
+//       console.log(data)
+//       window.location.reload(true)
+//     })
+// });
