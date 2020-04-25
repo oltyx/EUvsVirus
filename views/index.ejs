@@ -1,56 +1,37 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Vending Machine</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Safe Vending</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/landing-page.css">
 </head>
+<body style="background-color: #fff59d">
 
-<body>
-  <section>
-    <header>
-      <h1>Best Snacks Vending Machine.</h1>
-      <h2>Cruelty Free. Ethically Made.</h2>
-    </header>
-    <section class="container">
-      <main>
-        <% for(var i=0; i<9; i++) {%>
-        <section class="item">
-          <img id="avai" src="<%= messages[i].image %>" alt="">
-          <h2>$<%= messages[i].price %></h2>
-          <h3 class="count"><%= messages[i].count %></h3>
-        </section>
-        <% } %>
-      </main>
+<div class="container center-vertically">
+    <img class="mx-auto d-block" src="https://img.icons8.com/color/350/000000/vending-machine.png"/>
+    <div class="p-2 border rounded-blob" style="background-color: #c5cae9">
+        <div class="border rounded-blob" style="background-color: #ffffff">
+            <h1 class="text-center">
+                Welcome to the vending <br>
+                machine app
+            </h1>
+        </div>
+        <button class="mt-2 btn btn-danger mx-auto d-block baloo-font" onclick="location.href='/vending'">
+            Place your order
+        </button>
 
-      <section class="pay">
-        <section>
-          <section id="client">
-            <p>Total = <span id="pri"></span></p>
-          </section>
-          <section id="about">
-            <p>We know how hard it is to find vegan snacks, so here's a variety all in one place. We gather the snacks, and you just enjoy. Visit us online for more info on how to get a vegan vending machine installed near you.</p>
-          </section>
-          <!--<button id="payBtn" type="button" name="button">Pay</button>-->
-        </section>
-
-        <section class="choice">
-          <p>Your Item:</p>
-          <section id="selected">
-            <img id="selectImg" src="" alt="">
-          </section>
-        </section>
-
-        <section>
-          <button id="homeBtn" type="button" name="button">Home</button>
-          <button id="aboutBtn" type="button" name="button">About</button>
-        </section>
-      </section>
-    </section>
-  </section>
-
-  <form class="payment-form" method="POST" action="https://merchant.com/successUrl">
+    </div>
+</div>
+<form class="payment-form" method="POST" action="https://merchant.com/successUrl">
     <script>
         window.CKOConfig = {
             publicKey: 'pk_test_6ff46046-30af-41d9-bf58-929022d2cd14',
@@ -65,11 +46,11 @@
         };
     </script>
     <script async src="https://cdn.checkout.com/sandbox/js/checkout.js"></script>
-  </form>
+</form>
 
-  <script src="js/script.js" type="text/javascript"></script>
-
-  </div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

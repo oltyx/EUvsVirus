@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>Shop</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landing-page.css">
+</head>
+
+<body style="background-color: #c5cae9">
+  <section>
+    <header class="text-center open-font mb-4" >
+      <h1 class="d-none d-md-block text-white" ><span class="rounded-blob px-5" style="background-color:#37474f" >Vending machine inventory</span></h1>
+      <h2 class="d-block d-md-none text-white" style="font-size: 1.75rem"><span class="rounded-blob px-4" style="background-color:#37474f" >Vending machine inventory</span></h2>
+    </header>
+
+    <section class="container">
+
+      <div class="row rounded-blob mb-4" style="background-color: white">
+        <% for(var i=0; i<9; i++) {%>
+          <div class="item col-md-4 col-sm-6 ">
+            <img id="avai" src="<%= messages[i].image %>" alt="">
+            <h2><%= messages[i].price %> €</h2>
+            <h3 class="count"><%= messages[i].count %></h3>
+          </div>
+        <% } %>
+      </div>
+      <section class="pay rounded-blob open-font">
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <selection>
+              <form class=" ml-5payment-form container text-center" method="POST" action="https://merchant.com/successUrl">
+                <script>
+                  window.CKOConfig = {
+                    publicKey: 'pk_test_6ff46046-30af-41d9-bf58-929022d2cd14',
+                    customerEmail: 'user@email.com',
+                    value: 100,
+                    currency: 'EUR',
+                    paymentMode: 'cards',
+                    cardFormMode: 'cardTokenisation',
+                    cardTokenised: function(event) {
+                      console.log(event.data.cardToken);
+                    }
+                  };
+                </script>
+                <script async src="https://cdn.checkout.com/sandbox/js/checkout.js"></script>
+              </form>
+            </selection><br>
+
+            <section class="mb-4 ml-0 ml-md-5">
+                    <div/>
+              <br><section class="" id="client">
+                <p class=" mt-5 container text-center">Total = <span id="pri">0.00 €</span></p>
+              </section>
+            </section>
+                  </div>
+          <div class="col-12 col-md-9">
+            <section class="choice mb-2 mt-2 rounded-blob" style="background-color: #c5cae9">
+              <p style="font-weight: bold; color: #37474f">Your Item:</p>
+              <section id="selected" class="rounded mb-3 mx-auto d-block">
+                <img id="selectImg" src="" alt="">
+              </section>
+            </section>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+
+
+  <script src="js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+
+</html>

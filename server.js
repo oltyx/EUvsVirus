@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
 var multer = require('multer');
-var ObjectId = require('mongodb').ObjectID
+var ObjectId = require('mongodb').ObjectID;
 
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');

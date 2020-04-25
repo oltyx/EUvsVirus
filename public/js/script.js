@@ -37,12 +37,12 @@ Array.from(item).forEach(function(element, i) {
 })
 
 home.addEventListener("click", function(e) {
-  payCon.style.display = "grid"
+  payCon.style.display = "initial"
   aboutCon.style.display = "none"
 })
 
 about.addEventListener("click", function(e) {
-  aboutCon.style.display = "grid"
+  aboutCon.style.display = "initial"
   payCon.style.display = "none"
 })
 
