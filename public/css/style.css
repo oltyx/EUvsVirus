@@ -68,6 +68,15 @@ Pay Here Section
   font-size: 1em;
   border-radius: 3px;
 }
+.login-button{
+  background-color: darkorange;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 3px;
+
+}
 
 .count{
   display: none;
