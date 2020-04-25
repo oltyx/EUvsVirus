@@ -51,7 +51,7 @@ pay.addEventListener('click', function(e) {
   //cash float
   let mon = Number(justPrice.substr(1))
   total =+ mon
-  totalView.value = total
+  // totalView.value = total
 
   fetch('messages', {
       method: 'put',

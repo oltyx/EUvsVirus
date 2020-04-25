@@ -13,7 +13,6 @@
       <h1>Best Snacks Vending Machine.</h1>
       <h2>Cruelty Free. Ethically Made.</h2>
     </header>
-
     <section class="container">
       <main>
         <% for(var i=0; i<9; i++) {%>
@@ -50,7 +49,22 @@
       </section>
     </section>
   </section>
-
+  <form class="payment-form" method="POST" action="https://merchant.com/successUrl">
+    <script>
+        window.CKOConfig = {
+            publicKey: 'pk_test_6ff46046-30af-41d9-bf58-929022d2cd14',
+            customerEmail: 'user@email.com',
+            value: 100,
+            currency: 'GBP',
+            paymentMode: 'cards',
+            cardFormMode: 'cardTokenisation',
+            cardTokenised: function(event) {
+                console.log(event.data.cardToken);
+            }
+        };
+    </script>
+    <script async src="https://cdn.checkout.com/sandbox/js/checkout.js"></script>
+  </form>
 
   <script src="js/script.js" type="text/javascript"></script>
 
