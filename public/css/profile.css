@@ -1,0 +1,101 @@
+body{
+  margin:1% 3%;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.itemUpdate img{
+  height:100px;
+}
+
+#welcome{
+  background-color: rgb(59,114,111);
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  margin:0 0 20px 0;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+.well{
+  padding: 0 0 10px 10px;
+  border:1px solid black;
+  border-radius: 5px;
+}
+
+.itemUpdate form{
+  margin-bottom: 20px;
+}
+
+#formBreak span{
+  display: block;
+  margin:20px 0;
+}
+
+#cV{
+  margin-top:0;
+  text-align: center;
+}
+
+.itemList{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1px;
+  background-color: rgb(59,114,111);
+  padding:1px;
+  text-align: center;
+  
+}
+
+.itemList li{
+  list-style: none;
+  background-color: white;
+  padding: 10px 0;
+}
+
+.itemList span{
+  display: block;
+}
+
+.itemList img {
+  height: 80px;
+  width:90px;
+}
+
+button, .btnN{
+  background-color: rgb(59,114,111);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover, .btnN:hover{
+  color: white;
+  background-color: black;
+}
+
+.refill{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.reCon{
+}
+
+.refill img{
+  height: 80px;
+  width:90px;
+}
+
+
+.bottom{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
