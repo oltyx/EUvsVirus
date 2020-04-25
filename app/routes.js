@@ -4,9 +4,19 @@ module.exports = function(app, passport, db, multer, ObjectId) {
 
     // show the home page (will also have our login links)
     app.get('/', function(req, res) {
+        db.collection('messages').find().toArray((err, result) => {
+            if (err) return console.log(err)
+            res.render('index.ejs', {
+                user : req.user,
+                messages: result
+            })
+        })
+    });
+
+    app.get('/vending', function(req, res) {
       db.collection('messages').find().toArray((err, result) => {
         if (err) return console.log(err)
-        res.render('index.ejs', {
+        res.render('vending.ejs', {
           user : req.user,
           messages: result
         })

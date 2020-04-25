@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.rounded-blob {
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #37474f;
+}
+
+.center-vertically {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.baloo-font {
+    font-family: 'Baloo Paaji 2', cursive;
+}
+
+.open-font {
+    font-family: 'Open Sans', sans-serif;
+}
