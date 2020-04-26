@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="287e997e-e731-4885-9ba4-52a1e2e87bf7" name="EUvsVirus" url="http://142.93.230.135">
-        <fileTransfer rootFolder="/root" accessType="SFTP" sshConfigId="25a45fd2-1a15-4972-9fed-f49bc0d7477b" sshConfig="EUvsVirus">
+        <fileTransfer rootFolder="/root" accessType="SFTP" host="142.93.230.135" port="22" sshConfigId="473c6295-d837-4432-bcf2-dff25ae8ff8f" sshConfig="EUvsVirus">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
