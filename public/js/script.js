@@ -6,7 +6,6 @@ const aboutCon = document.querySelector("#about")
 const item = document.getElementsByClassName("item")
 const selectImg = document.querySelector("#selectImg")
 const selectPrice = document.querySelector("#pri")
-
 const avai = document.querySelector("#avai")
 // let totalView = document.querySelector("#totalView")
 
@@ -32,14 +31,33 @@ Array.from(item).forEach(function(element, i) {
       source = itemImage.slice(22, itemImage.length)
       justPrice = item[i].querySelector("h2").textContent
       count = item[i].querySelector("h3").textContent
+      if (document.querySelector("#cko-widget")) {
+        document.querySelector("#cko-widget").remove()
+      }
+      var para = document.createElement("script")
+      para.src = "https://cdn.checkout.com/sandbox/js/checkout.js";
+      para.async = true
+      window.CKOConfig = {
+        publicKey: 'pk_test_6ff46046-30af-41d9-bf58-929022d2cd14',
+        customerEmail: 'user@email.com',
+        value: selectPrice.textContent.replace('.', '').replace(" €", ''),
+        currency: 'EUR',
+        paymentMode: 'cards',
+        cardFormMode: 'cardTokenisation',
+        cardTokenised: function(event) {
+          console.log(event.data.cardToken);
+        }
+      }
+      document.querySelector("#payment-form").appendChild(para)
     }
   })
 })
 
-home.addEventListener("click", function(e) {
+
+/*home.addEventListener("click", function(e) {
   payCon.style.display = "initial"
   aboutCon.style.display = "none"
-})
+})*/
 
 about.addEventListener("click", function(e) {
   aboutCon.style.display = "initial"
