@@ -1,3 +1,5 @@
+//import Payments from "app/models/payment"
+
 module.exports = function(app, passport, db, multer, ObjectId) {
 
 // normal routes ===============================================================
@@ -75,6 +77,35 @@ app.get('/test', isLoggedIn, function(req, res) {
         res.send('Message deleted!')
       })
     })
+
+//---------------------------------------
+// PAYMENT CODE
+//---------------------------------------
+    app.post('/orders', (req, res) => {
+       db.collection('payments').save({token: req.body.token,productId: req.body.productId}, function (err, small) {
+            if (err) return res.send(500, err);
+            res.send("mata");
+            // saved!
+        });
+        //return res.redirect('/')
+    });
+    app.get('/orders', (req,res) => {
+       db.collection('payments').find().toArray((err, result) => {
+           if (err) return res.send(500, err);
+            res.send(result)
+        })
+    });
+    app.delete('/orders/:id',(req,res) => {
+        db.collection('payments').findOneAndDelete({ _id: ObjectId(req.params.id)}, (err, result) => {
+            if (err) return res.send(500, err);
+            res.send(result)
+        })
+    });
+
+//---------------------------------------
+// PAYMENT CODE END
+//-
+
 //---------------------------------------
 // IMAGE CODE
 //---------------------------------------
