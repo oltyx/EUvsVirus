@@ -23,10 +23,26 @@ body{
 
 .well{
   padding: 0 0 10px 10px;
-  border:1px solid black;
-  border-radius: 5px;
-}
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #37474f;
+  background-color: #c5cae9;
 
+}
+.gei{
+  padding: 0 0 10px 10px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #37474f;
+  background-color: white;
+  width: 80%;
+}
 .itemUpdate form{
   margin-bottom: 20px;
 }
