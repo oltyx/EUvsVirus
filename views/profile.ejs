@@ -9,53 +9,57 @@
 </head>
 
 <body>
-    <h1 id="welcome">Admin Welcome</h1>
+    <h1 id="welcome" style="background-color: #37474f">Admin Welcome</h1>
   <div class="container">
 
     <!-- LOCAL INFORMATION -->
-    <div class="col-sm-4">
-      <div class="well">
+    <div class="col-sm-4 ">
+      <div class="well mb-5">
         <% if (user.local.email) { %>
-        <p>
+        <p style="font-size: 20px">
           <strong>id</strong>:
           <%= user._id %><br>
           <strong>email</strong>:
           <%= user.local.email %><br>
         </p>
-
-        <a href="/unlink/local" class="btn btn-default">Unlink</a>
+    <div class="container-fluid text-center">
+        <a href="/unlink/local" class="   " style="font-size: 25px" >Unlink</a>
         <% } else { %>
-        <a href="/connect/local" class="btn btn-default">Connect Local</a>
+            <a href="/connect/local" class="btn btn-default " style="font-size: 25px">Connect Local</a>
         <% } %>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <a href="/logout" class="btn btn-default btn-sm" style="font-size: 25px">Logout</a>
+    </div>
 
-      </div>
+
+      </div><br>
 
     <div class="row">
+        <div class=" container-fluid well ">
+          <section class="itemUpdate ">
 
-        <section class="itemUpdate">
-          <h2>Add an Item</h2>
-          <!-- IMAGE UPLOAD -->
-          <h3>Upload Item Picture</h3>
-          <img src="<%= user.profileImg %>" alt="">
-          <form action="/up" enctype="multipart/form-data" method="post">
-            <input type="file" name="file-to-upload">
-            <input class="btnN" type="submit" value="Upload">
-          </form>
-          <% if (user.local.email) { %>
-            <form id="formBreak" action="/messages" method="POST">
+            <img src="<%= user.profileImg %>" alt="">
+            <form action="/up" enctype="multipart/form-data" method="post">
+              <input type="file" name="file-to-upload">
+              <input class="btnN" type="submit" value="Upload" style="background-color: #37474f">
+            </form>
+            <% if (user.local.email) { %>
+              <form id="formBreak" action="/messages" method="POST">
               <span>User:
               <input type="text" value="<%= user.local.email %>" name="name"></span>
-              <span>Item Name:
+                <span style="font-size: 20px">Item Name:
               <input type="text" placeholder="Item" name="item"></span>
-              <span>Count:
+                <span style="font-size: 20px">Count:
               <input type="text" placeholder="Amount" name="count"></span>
-              <span>Price:
+                <span style="font-size: 20px">Price:
               <input type="text" placeholder="Price $" name="price"></span>
-              <button type="submit">Submit</button>
-            </form>
+                <div class="container ">
+                <button type="submit" class="container center-vertically" style="background-color: #37474f">Submit</button>
+                </div>
+              </form>
             <% } %>
-        </section>
+          </section>
+        </div>
+
       </div>
     </div>
     <div class="col-sm-6">
@@ -78,24 +82,24 @@
     </div>
     
   </div>
-  <section class="bottom">
+  <section class="  bottom container well ">
     <section class="reCon">
-      <h1>Refill Items</h1>
+      <h1 class=" container open-font ">Refill Items</h1>
       <section class="refill">
         <% for(var i=0; i<messages.length; i++) {%>
             <% if(messages[i].count == 0){ %>
               <section>
               <span><img  src="<%= messages[i].image %>" alt=""></span>
-              <span>Item Name: <%= messages[i].item %></span>
+              <span style="font-size: 20px" class="open-font">Item Name: <%= messages[i].item %></span>
             </section>
               <% } %>
         <% } %>
       </section>
     </section>
     <section>
-      <h1>Stats</h1>
-      <section>
-        <p>Daily Total: $<span id="totalView"></span></p>
+      <h1 >Stats</h1>
+      <section class="container-fluid gei ml-5" >
+        <p  style="font-size: 25px " >Daily Total: $<span id="totalView"></span></p>
       </section>
     </section>
   </section>
